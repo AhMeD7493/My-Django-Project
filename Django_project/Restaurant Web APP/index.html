@@ -1,0 +1,241 @@
+<!--
+================================
+1-navbar
+2-home
+3-about
+4-Menu
+5-Reservation
+6-footer
+================================
+-->
+
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+  <!--<navbar>-->
+  <nav class="navbar navbar-expand-lg navbar-light position-fixed">
+    <div class="container">
+      <a class="navbar-brand" href="#">Restaurant</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link  active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Reservation">Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Logout </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--</navbar>-->
+  <!-- <home> -->
+  <header id="home">
+    <div class="overlay">
+      <div class="caption  flex-column  d-flex justify-content-center align-items-center">
+        <h2 class="welcome">Welcome to Our Restaurant</h2>
+        <h4><span class="typed"></span></h4>
+        <p class="py-3">discover our daily specials, promotions, and discounts<br>for an even more delightful experience
+        </p>
+        <a href="#Reservation" class="reserve">Reservation</a>
+        <div class="scroll"> <a href=""></a></div>
+      </div>
+    </div>
+  </header>
+  <!-- </home>  -->
+  <!-- <about> -->
+  <section id="about">
+    <div class="container mt-5">
+      <div class="row mb-5">
+        <div class="col-md-5">
+          <img src="images/about-main.jpg" alt="about me" class="w-100">
+        </div>
+        <div class="col-md-7">
+          <p class="mt-4">Welcome to our restaurant web Application!</p>
+          <p class="mt-4">Our application is meticulously designed to elevate your dining experience.</p>
+          <p class="mt-4">ensuring your seamless and enjoyable.</p>
+          <p class="mt-4">Explore our menu effortlessly, place orders, and make reservations with ease using our app.
+          </p>
+          <p class="mt-4">discover our daily specials, promotions, and discounts for an even more delightful experience.
+          </p>
+          <p class="mt-4">Our Web Application is user-friendly and intuitive, so user can quickly find what you are
+            looking for.</p>
+          <p class="mt-4">Our online ordering system is fast and secure, so you can place orders from anywhere at any
+            time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- </about> -->
+  <!-- <Menu> -->
+  <section class="Menu bg-light py-5" id="Menu">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-6 m-auto text-center">
+          <h1>Our Menu</h1>
+          <p class="text-muted">Elevate your dining experience with our enticing main courses</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="Menu-box text-center border rounded rounded p-4">
+            <img src="images/gallery_01.jpg" class="w-100 h-50">
+            <h5> Pizza </h5>
+            <div class="line1"></div>
+            <p class="text-muted">There are many variations of passages of but the majority have suffered alteration.
+            </p>
+            <div class="price"> $100 </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="Menu-box text-center border rounded rounded p-4">
+            <img src="images/gallery_03.jpg" class="w-100 h-50">
+            <h5> Soup </h5>
+            <div class="line1"></div>
+            <p class="text-muted">There are many variations of passages of but the majority have suffered alteration.
+            </p>
+            <div class="price"> $50 </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="Menu-box text-center border rounded p-4">
+            <img src="images/gallery_05.jpg" class="w-100 h-50">
+            <h5> Desert </h5>
+            <div class="line1"></div>
+            <p class="text-muted">There are many variations of passages of but the majority have suffered alteration.
+            </p>
+            <div class="price"> $30 </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="Menu-box text-center border rounded p-4">
+            <img src="images/gallery_06.jpg" class="w-100 h-50">
+            <h5> Rice </h5>
+            <div class="line1"></div>
+            <p class="text-muted">There are many variations of passages of but the majority have suffered alteration.
+            </p>
+            <div class="price"> $40 </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="Menu-box text-center border rounded p-4">
+            <img src="images/gallery_08.jpg" class="w-100 h-50">
+            <h5> Classic Burger </h5>
+            <div class="line1"></div>
+            <p class="text-muted">There are many variations of passages of but the majority have suffered alteration.
+            </p>
+            <div class="price"> $60 </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="Menu-box text-center border rounded p-4">
+            <img src="images/gallery_09.jpg" class="w-100 h-50">
+            <h5> Burger </h5>
+            <div class="line1"></div>
+            <p class="text-muted">There are many variations of passages of but the majority have suffered alteration.
+            </p>
+            <div class="price"> $10 </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 text-right">
+        <button type="submit" value="Place order" class="rounded text-center">Place order</button>
+      </div>
+    </div>
+  </section>
+  <!-- </Menu> -->
+  <!-- <contact> -->
+  <section class="Reservation py-5" id="Reservation">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-6 m-auto text-center">
+          <h1> Reservation </h1>
+          <p class="text-muted">Please fill out the form to reserve a table.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="text-center">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" name="Name" placeholder="Enter your name" class="form-control mt-5 mb-4">
+              </div>
+              <div class="col-lg-6">
+                <input type="email" name="Name" placeholder="Enter your email" class="form-control mt-5 mb-4">
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+              </div>
+              <div class="col-lg-6">
+                <input type="number" class="form-control" id="guests" min="1" placeholder="Enter number of guests">
+              </div>
+              <div class="col-lg-6">
+                <input type="date" class="form-control" id="date" placeholder="Enter date">
+              </div>
+              <div class="col-lg-6">
+                <input type="time" class="form-control" id="time" placeholder="Enter time">
+              </div>
+              <div class="col-lg-12">
+                <textarea name="Message" placeholder="Special Requests" class="form-control mt-3  mb-4"
+                  rows="4"></textarea>
+              </div>
+            </div>
+            <div class="col-lg-12 text-right">
+              <button type="submit" value="Reserve table" class="rounded text-center">Reserve Table</button>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- <contact> -->
+  <!-- <footer> -->
+  <section class="footer py-5 text-center">
+    <div class="social p-3">
+      <a>
+        <li class="fab fa-facebook"></li>
+      </a>
+      <a>
+        <li class="fab fa-instagram"></li>
+      </a>
+    </div>
+    <p class="textmuted">2024 © Restaurant</p>
+  </section>
+  <!-- </footer> -->
+  <div id="up"> <i class="fa fa-angle-up"></i></div>
+  <script src="js/typed.js"></script>
+  <script src="js/sketch.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

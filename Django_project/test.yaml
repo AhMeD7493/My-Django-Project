@@ -1,0 +1,81 @@
+Parameters:
+  LabVpcCidr:
+    Type: String
+    Default: 10.0.0.0/20
+
+  PrivateSubnetCidr:
+    Type: String
+    Default: 10.0.0.0/24
+
+  PublicSubnetCidr:
+    Type: String
+    Default: 10.0.1.0/24
+
+  AmazonLinuxAMIID:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+
+Resources:
+  LabVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref LabVpcCidr
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: Lab VPC
+
+  # ... (other resources)
+
+  ###########
+  # Public Route Table
+  ###########
+
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    DependsOn: LabVPC
+    Properties:
+      VpcId: !Ref LabVPC
+      Tags:
+        - Key: Name
+          Value: Public Route Table
+
+  PublicSubnet:
+    Type: AWS::EC2::Subnet
+    DependsOn: LabVPC
+    Properties:
+      VpcId: !Ref LabVPC
+      CidrBlock: !Ref PublicSubnetCidr
+      AvailabilityZone: !Select 
+        - 0
+        - !GetAZs 
+          Ref: AWS::Region
+      Tags:
+        - Key: Name
+          Value: Public Subnet
+
+  PublicRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    DependsOn:
+      - PublicRouteTable
+      - PublicSubnet
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet
+
+  # Update the AppSecurityGroup to allow traffic from the public subnet
+  AppSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    DependsOn: LabVPC
+    Properties:
+      GroupName: App
+      GroupDescription: Enable access to App
+      VpcId: !Ref LabVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  
