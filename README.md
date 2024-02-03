@@ -41,7 +41,7 @@ Step2. Launching EC2 Instance for Application Hosting:
 
 - sudo yum install python3-pip -y
 
-- yum install django
+- pip3 install django
 
 - pip3 install django-bootstrap3
 
