@@ -28,3 +28,29 @@ Step2. Launching EC2 Instance for Application Hosting:
 - Deploy a new RDS PostgreSQL instance within one of the private subnets.
 - Configure security groups to permit inbound traffic from the local postgres on port 5432.
 
+
+## Deploy your project in ec2 instance. 
+
+- sudo yum -y update 
+
+- yum install git
+
+- git clone https://github.com/AhMeD7493/My-Django-Project.git
+
+- git checkout master # if your project in master branch not in main in github
+
+- sudo yum install python3-pip -y
+
+- yum install django
+
+- pip3 install django-bootstrap3
+
+- yum install Pillow
+
+- python manage.py makemigrations
+
+- python manage.py migrate 
+
+- python manage.py runserver 0.0.0.0:8000 --> allow port 8000 in security group
+
+
