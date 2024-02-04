@@ -1,4 +1,4 @@
-# My-Django-Project
+# My Web Application 
 # Django Restaurant Web Application
 
 Welcome to the Django Restaurant Web Application! This project is designed to provide a seamless experience for managing a restaurant's operations, including menu management, reservation handling, user authentication, and order processing.
