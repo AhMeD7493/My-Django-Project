@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'resturant_project.wsgi.application'
 # }
 DATABASES = {
     'default': {
-        'ENGINE': config('database_engine'),
-        'NAME': config('name'),
-        'USER': config('user'),
-        'PASSWORD': config('pass'),
-        'HOST': config('host') ,# Endpoint of your RDS database
-        'PORT': config('port'),
+        'ENGINE': "django.db.backends.postgresql",
+        'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASS"),
+        'HOST': os.environ.get("DB_HOST"), # Endpoint of your RDS database
+        'PORT': os.environ.get("DB_PORT"),
     }
 }
 
