@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Build the Django app image
-                    sh 'docker-compose build'
+                    sh 'docker compose build'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // Run your tests
-                    sh 'docker-compose run web python manage.py test'
+                    sh 'docker compose run web python manage.py test'
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     // Bring up the containers
-                    sh 'docker-compose up -d'
+                    sh 'docker compose up -d'
                 }
             }
         }
@@ -45,7 +45,7 @@ pipeline {
         always {
             // Clean up
             script {
-                sh 'docker-compose down'
+                sh 'docker compose down'
             }
         }
     }
